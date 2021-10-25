@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Authors></Authors>
+    <Company></Company>
+    <Version>0.0.0.1</Version>
+    <Description>A sample plugin.</Description>
+    <Copyright></Copyright>
+    <PackageProjectUrl>https://github.com/goatcorp/SamplePlugin</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows7.0</TargetFramework>
+    <Platforms>x64</Platforms>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\Data\samplePlugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Data\goat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DalamudLibPath>$(appdata)\XIVLauncher\addon\Hooks\dev\</DalamudLibPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DalamudPackager" Version="2.1.2" />
+    <Reference Include="Dalamud">
+      <HintPath>..\..\..\d\6.0.0.13\Dalamud.dll</HintPath>
+    </Reference>
+    <Reference Include="FFXIVClientStructs">
+      <HintPath>..\..\Dalamud\bin\Debug\FFXIVClientStructs.dll</HintPath>
+    </Reference>
+    <Reference Include="ImGui.NET">
+      <HintPath>..\..\Dalamud\bin\Debug\ImGui.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ImGuiScene">
+      <HintPath>..\..\Dalamud\bin\Debug\ImGuiScene.dll</HintPath>
+    </Reference>
+    <Reference Include="Lumina">
+      <HintPath>..\..\Dalamud\bin\Debug\Lumina.dll</HintPath>
+    </Reference>
+    <Reference Include="Lumina.Excel">
+      <HintPath>..\..\Dalamud\bin\Debug\Lumina.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Dalamud\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
